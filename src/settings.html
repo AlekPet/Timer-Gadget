@@ -1,0 +1,54 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gadget</title>
+<head>
+<script language="JavaScript" src="js/timer_setting.js"></script>
+<link rel="stylesheet" href="css/timer_setting.css" type="text/css" media="all" />
+</head>
+<body onload="init();">
+<p  style="font-weight:bold;color:blue;margin: 0;">Задать значения события:</p>
+Событие: <input type="text" size="20"  id="sobitie" ondblclick="show_pop_font(this);" title="Двойное нажате вызвает настройку шрифта!"/>&nbsp;<input type="button" value="Шрифт" onclick="show_pop_font(this);" />
+<input type="hidden" id="sobitie_font" value="">
+</br>
+Цвет фона: <input type="text" size="5" maxlength="7"  id="sobitie_col" onchange="checkinput(this);" onclick="show_pop(this);" />&nbsp;Цвет текста: <input type="text" size="5" maxlength="7"  id="sobitie_col_text" onchange="checkinput(this);" onclick="show_pop(this);" /></br>
+Симв.проп.: <input type="text" style="width:30px;"  maxlength="1"  id="sobitie_space_text" />&nbsp;Кол-во: <input type="text" style="width:30px;" maxlength="3"  id="sobitie_space_count" onchange="checkinput(this);" />&nbsp;Скор.(сек): <input type="text" style="width:40px;"  maxlength="5"  id="sobitie_space_timer" onchange="checkinput(this);" /><hr>
+<p  style="font-weight:bold;color:blue;margin: 0;">Задать значения времени:</p>
+День: <input type="text" size="2" maxlength="2"  id="d" onchange="checkinput(this);" />
+Месяц<input type="text" size="2"  maxlength="2" id="m" onchange="checkinput(this);"  />
+Год: <input type="text" size="4"  id="y" maxlength="4"onchange="checkinput(this);"  /></br><hr>
+Час: <input type="text" size="2"  id="h" maxlength="2" onchange="checkinput(this);"  />
+Минут: <input type="text" size="2"  id="mi" maxlength="2" onchange="checkinput(this);"  />
+Секунд: <input type="text" size="2"  id="s" maxlength="2" onchange="checkinput(this);"  /></br><hr>
+<p  style="font-weight:bold;color:blue;margin: 0;">Задать значения цвета для фона и текста:</p>
+<table id="t1">
+<tr>
+<td>Цвет фона: <input type="text" size="5" maxlength="7"  id="scolor" onchange="checkinput(this);"  onclick="show_pop(this);"/></td>
+<td>Цвет текста: <input type="text" size="5" maxlength="7"  id="tscolor" onchange="checkinput(this);" onclick="show_pop(this);" /></td>
+</tr>
+</table>
+<div style="margin-top:10px;"><a href=" https://github.com/AlekPet/" title="https://github.com/AlekPet/">Автор: AlekPet</a></div>
+<!-- PopUP color -->
+<div id="div_pop" style="display:none;">
+<table  style="margin-top: 20px;"><tr>
+<td>Цвет: <input type="text" size="5" maxlength="7"  id="sel_color" onchange="checkinput(this);"></td>
+</tr><tr>
+<td>Red: &nbsp;&nbsp;&nbsp;<input type="button" value="+" id="sel_r1" onclick="colorch(this)">&nbsp;<input type="button" value="&ndash;" id="sel_r2" onclick="colorch(this)">&nbsp;<input type="text" size="2"  id="sel_r0" maxlength="3" onchange="checkinput(this);"></td>
+</tr><tr>
+<td>Green: <input type="button" value="+" id="sel_g1" onclick="colorch(this)">&nbsp;<input type="button" value="&ndash;" id="sel_g2" onclick="colorch(this)">&nbsp;<input type="text" size="2"  id="sel_g0" maxlength="3" onchange="checkinput(this);" ></td>
+</tr><tr>
+<td>Blue:&nbsp;&nbsp;&nbsp;<input type="button" value="+" id="sel_b1" onclick="colorch(this)">&nbsp;<input type="button" value="&ndash;" id="sel_b2" onclick="colorch(this)">&nbsp;<input type="text" size="2"  id="sel_b0" maxlength="3" onchange="checkinput(this);" ></td>
+</tr><tr>
+<td style="text-align:center;"><input type="button" id="apply" value="Применить" disabled="true">&nbsp;<input type="button" id="otmena" value="Отмена"></td>
+</tr></table>
+</div>
+<!-- PipUp Fonts -->
+<div id="div_pop_f" style="display:none;">
+<p style="font-weight:bold;color:blue;margin: 10px 0px;">Настрока шрифта</p>
+<div id="font_demo" style="overflow:hidden;">Предпросмотр</div>
+<p style="margin: 5px 0px;">Шрифт: <select id="fonts_select" style="width:100px;" onchange="font_demo.style.fontFamily = this.value; "></select></p>
+<p style="margin: 5px 0px;">Стиль:  <b>B</b><input type="checkbox" name="fonts_sett" value="bold" onclick="setstyle(this,font_demo)" >&nbsp;<i>I</i><input type="checkbox" name="fonts_sett" value="italic" onclick="setstyle(this,font_demo)">&nbsp;<u>U</u><input type="checkbox" name="fonts_sett" value="underline" onclick="setstyle(this,font_demo)"></p>
+<p style="margin: 5px 0px;">Размер: <input type="text" maxlength="2" style="width:30px;"  id="sobitie_font_size" onchange="checkinput(this);;" />px</p><hr>
+<input type="button" id="apply_f" value="Применить" disabled="true">&nbsp;<input type="button" id="otmena_f" value="Отмена">
+</div>
+</body>
+</html>

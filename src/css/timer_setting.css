@@ -1,0 +1,54 @@
+body {
+margin: 0px;
+padding: 0px;
+width: 410px;
+height: 300px;
+text-align: left;
+}
+#r0, #g0, #b0,#tr0, #tg0, #tb0, #sel_r0, #sel_g0, #sel_b0{
+color:white;
+}
+#r0,#tr0,#sel_r0{
+background:red;
+}
+#b0,#tb0,#sel_b0{
+background:blue;
+}
+#g0,#tg0,#sel_g0{
+background:green;
+}
+#t1{
+width: 75%;
+font-size: 8pt;
+}
+#div_pop{
+position: absolute;
+top: 50px;
+left: 80px;
+width: 150px;
+height: 180px;
+background: white;
+border:1px solid black;
+text-align:center;
+}
+#apply, #otmena{
+width:70px;
+margin-top:5px;
+}
+
+#div_pop_f{
+position: absolute;
+top: 50px;
+left: 80px;
+width: 180px;
+height: 200px;
+background: white;
+border:1px solid black;
+text-align:center;
+}
+
+#font_demo{
+margin:5px 0px 5px 0px;
+background: yellow;
+padding: 2px;
+}

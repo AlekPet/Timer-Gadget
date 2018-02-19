@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gadget>
+  <name>Timer</name>
+  <namespace>_Timer</namespace>
+  <icons>
+    <icon src="_Timer.JPEG" />
+  </icons>
+  <version>1.0</version>
+  <author name="AlekPet">
+    <info url="https://github.com/AlekPet/Timer-Gadget" />
+  </author>
+  <copyright>Copyright© 2013</copyright>
+  <description>Таймер гаджет</description>
+  <hosts>
+    <host name="sidebar">
+      <base type="HTML" src="_Timer.html" />
+      <permissions>full</permissions>
+      <platform minPlatformVersion="1.0" />
+    </host>
+  </hosts>
+</gadget>
